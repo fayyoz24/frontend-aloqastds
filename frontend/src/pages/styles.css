@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.students-page {
+  background: url("https://images.unsplash.com/photo-1523240795612-9a054b0db644")
+    no-repeat center center/cover;
+  min-height: 100vh;
+  color: white;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  min-height: 100vh;
+  padding: 40px;
+  text-align: center;
+}
+
+.students-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.student-card {
+  background: white;
+  color: black;
+  padding: 15px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.student-card:hover {
+  background: #007bff;
+  color: white;
+}
+
+.login-box {
+  margin-top: 30px;
+}
+
+.login-box input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+.login-box button {
+  padding: 10px 15px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+.detail-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+.detail-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.detail-card button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .students-list {
+    flex-direction: column;
+  }
+}
