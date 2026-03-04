@@ -1,6 +1,6 @@
 import type { AuthTokens, Student, StudentDetail, DocumentListItem } from "../types";
 
-const BASE_URL = "http://localhost:8000/api/students"; // <-- o'zgartir
+const BASE_URL = "https://aloqabankstudents.pythonanywhere.com/api/students"; // <-- o'zgartir
 
 // Token localStorage da saqlanadi
 const getAccessToken = (): string | null => localStorage.getItem("access_token");
