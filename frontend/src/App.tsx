@@ -1,14 +1,16 @@
 import { Routes, Route } from "react-router-dom";
-import StudentsPage from "./pages/StudentsPage";
+import { AuthProvider } from "./context/AuthContext";
+import StudentListPage from "./pages/StudentListPage";
 import StudentDetailPage from "./pages/StudentDetailPage";
+import "./styles.css";
 
-function App() {
+export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<StudentsPage />} />
-      <Route path="/student/:id" element={<StudentDetailPage />} />
-    </Routes>
+    <AuthProvider>
+      <Routes>
+        <Route path="/" element={<StudentListPage />} />
+        <Route path="/students/:pk" element={<StudentDetailPage />} />
+      </Routes>
+    </AuthProvider>
   );
 }
-
-export default App;

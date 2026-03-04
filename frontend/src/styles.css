@@ -123,12 +123,6 @@ body {
   font-size: 24px;
 }
 
-.avatar.img {
-  object-fit: cover;
-  border: 2px solid var(--accent);
-}
-
-
 /* â”€â”€â”€ Profile â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .profile-section {
@@ -378,21 +372,3 @@ body {
   font-family: var(--mono);
 }
 .status-msg.error { color: var(--error); }
-
-.btn-cert {
-  display: inline-block;
-  font-size: 12px;
-  font-family: var(--mono);
-  color: var(--success);
-  border: 1px solid var(--success);
-  border-radius: 6px;
-  padding: 4px 10px;
-  text-decoration: none;
-  transition: background 0.2s;
-  width: fit-content;
-  margin-top: 4px;
-}
-
-.btn-cert:hover {
-  background: rgba(62, 207, 142, 0.15);
-}
