@@ -43,18 +43,26 @@ export default function StudentDetailPage() {
   const handleCertDownload = async (url: string, langName: string) => {
     try {
       const token = localStorage.getItem("access_token");
-      const res = await fetch(url, {
+
+      const fullUrl = url.startsWith("http")
+        ? url
+        : `https://aloqabankstudents.pythonanywhere.com${url}`;
+
+      const res = await fetch(fullUrl, {
         headers: token ? { Authorization: `Bearer ${token}` } : {},
       });
+
       if (!res.ok) throw new Error();
+
       const blob = await res.blob();
-      const ext = url.split(".").pop()?.split("?")[0] || "pdf";
+      const ext = fullUrl.split(".").pop()?.split("?")[0] || "pdf";
+
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
       a.download = `${langName}_sertifikat.${ext}`;
       a.click();
       URL.revokeObjectURL(a.href);
-    } catch {
+    } catch (e) {
       alert("Sertifikatni yuklashda xato");
     }
   };
