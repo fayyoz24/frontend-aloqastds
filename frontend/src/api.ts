@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://127.0.0.1:8000/api/students/",
+  baseURL: "https://aloqabankstudents.pythonanywhere.com/api/students/",
 });
 
 export default API;
