@@ -70,7 +70,7 @@ export default function StudentDetailPage() {
       <section className="profile-section">
         {student.prof_pic ? (
         <img
-          src={student.prof_pic}
+          src={`https://aloqabankstudents.pythonanywhere.com${student.prof_pic}`}
           alt={`${student.first_name} ${student.last_name}`}
           className="avatar large img"
         />
