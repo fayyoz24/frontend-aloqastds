@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target: "http://localhost:8000",  // Django server
+        target: "https://aloqabankstudents.pythonanywhere.com/",  // Django server
         changeOrigin: true,
       },
     },
